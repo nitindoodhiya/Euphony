@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Horizontally Scrolling Site from CSS-Tricks</title>
+	
+	<link rel="stylesheet" href="style2.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="jquery.mousewheel.js"></script>
+	<script>
+	$(function(){
+		$("#page-wrap").wrapInner("<table cellspacing='30'><tr>");
+		$(".post").wrap("<td></td>");
+		$("body").mousewheel(function(event, delta) {
+			this.scrollLeft -= (delta * 30);
+			event.preventDefault();
+		});   
+	});
+	function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+	</script>
+</head>
+<style>
+.td{
+font: 3em sans-serif;
+
+}
+</style>
+
+<body>
+
+	
+				  
+		<div id="mySidenav" class="sidenav">
+                
+                <a href="#" style="padding-top:5pc">Upload Song</a>
+				<a href="#">Create Playlists</a>
+				<a href="#">Other Users</a>
+                <a href="#">Contact Us</a>
+                <div  class="container-fluid;" style=" position: absolute; bottom: 0px; ">
+                    <audio src="audio.mp3"  width="1280"  controls preload style="float:right"></audio>
+                </div>
+
+			  </div>
+	<div id="page-wrap" style="padding-bottom:12pc;padding-top:2pc">
+		
+		<div class="post" style="padding-left:25pc;width: 50pc">
+            <div id="inf">
+                <div class="container detailbox menu" style="margin-left: auto;margin-right: auto;width: 50pc">
+                
+                    <table class="table " style="color: white; ">
+                                    <thead>
+                                      <tr>
+                                        <th ><h4 style="color: white">Title</h4></th>
+                                        <th ><h4 style="color: white">Artists</h4></th>
+                                        <th ><h4 style="color: white">Time</h4></th>
+                                        
+                                      </tr>
+                                    </thead>
+                                    <tbody style="font:1.5em Sans-serif"> 
+                                            <tr >
+                                                <td><img src="img/playicon.png" style="width:20px ;height:20px"></td>
+                                        <td >Lag ja Gale</td>
+                                        <td>Rahat Fateh Ali Khan</td>
+                                        <td>3:46</td>
+                                        
+                                      </tr>
+                                            <tr>
+                                        
+                                            <td>Mast Magan</td>
+                                        <td>Arjit,Chinmayi</td>
+                                        <td>4:40</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        
+                                      <td>offo</td>
+                                        <td>Amit,Aditi</td>
+                                        <td>3:33</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        
+                                      <td>Locha-E-Ulfat</td>
+                                        <td>Benny Dayal</td>
+                                        <td>4:48</td>
+                                        
+                                      </tr>
+                
+                                      <tr>
+                                        
+                                      <td>Chandaniya</td>
+                                        <td>Mohan,Yashita...</td>
+                                        <td>4:07</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        
+                                        <td>Iski Uski</td>
+                                        <td>Shankar Mahadevan</td>
+                                        <td>3:46</td>
+                                          
+                                        </tr>
+                                        <tr>
+                                        
+                                            <td>Hulla Re</td>
+                                              <td>Shankar Mahadevan</td>
+                                              <td>3:46</td>
+                                              
+                                            </tr>
+                                            <tr>
+                                        
+                                                <td>Lag ja Gale</td>
+                                                  <td>Rahat Fateh Ali Khan</td>
+                                                  <td>3:46</td>
+                                                  
+                                                </tr>
+                                                <tr>
+                                        
+                                                    <td>Lag ja Gale</td>
+                                                      <td>Rahat Fateh Ali Khan</td>
+                                                      <td>3:46</td>
+                                                      
+                                                    </tr>
+                                                    <tr>
+                                        
+                                                        <td>Lag ja Gale</td>
+                                                          <td>Rahat Fateh Ali Khan</td>
+                                                          <td>3:46</td>
+                                                          
+                                                        </tr>
+                                                        <tr>
+                                        
+                                                            <td>Lag ja Gale</td>
+                                                              <td>Rahat Fateh Ali Khan</td>
+                                                              <td>3:46</td>
+                                                              
+                                                            </tr>
+                                                                                        
+                                      </tbody>
+                
+                                      <thead>
+                
+                                    </tbody>
+                                 </table>
+                
+                </div>
+                
+                
+                </div>
+                
+                                
+        </div>
+	</div>	
+	</div>
+	
+</body>
+
+</html>s
