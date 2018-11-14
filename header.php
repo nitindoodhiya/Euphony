@@ -1,11 +1,16 @@
-<?php
-session_start(); 
-?>
+ <?php
+session_start();
+  $_SESSION['userid']=0;
+?> 
 <!DOCTYPE html>
 <html>
 <head>
        <title>User Registration</title>
        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+    	<meta name="google-signin-client_id" content="435934696636-i1mnctcon3nnqf7uii0kj9gfhlkn4n4c.apps.googleusercontent.com">
+    	<script src="https://apis.google.com/js/platform.js" async defer></script>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -13,6 +18,7 @@ session_start();
        <link rel ="stylesheet" type ="text/css" href="style.css">
        <link rel ="shortcut icon" type="image/jpg" href="music.jpg"> 
        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">        
+       <script src="glogin.js"></script>
 </head>
 
 <body >
@@ -53,15 +59,14 @@ session_start();
     <div class="row">
 
         <div class="column left" style="padding-top: 8pc">
-            <a href="FBlogin.php">
-            <img src="img/fblog.png" width="40%" style="margin-left:10pc">
+            <a onclick= "window.location = ' <?php echo $loginUrl ?>';">
+            <img src="img/fblog.png" width="40%" style="margin-left:10pc" >
             </a>
-            <a href="gmaillogin.php">
-            <img src="img/gmaillog.png" width="40%" style="margin-left:10pc;padding-top: 1pc">
-            </a>
+            <div class="g-signin2" data-onsuccess="OnLogIn"> 
+    	</div>
         </div>
         <div class="column right">
-        <form  method="post" action="includes/login.inc.php">
+        <form  method="post" action="login.php">
 
                 <div class="header">
                         <h2> Login </h2>
@@ -88,13 +93,6 @@ session_start();
         </form>
         </div>
     </div>
-    </div>
-        
-    <?php
-    if(isset($_SESSION['u_id']))
-    {
-        echo "loged in";
-    }
-  ?>  
+    </div> 
  </body>
 </html>

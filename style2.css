@@ -1,0 +1,74 @@
+
+
+
+tr { 
+	vertical-align: top;
+}
+
+.post { 
+	width: 440px; 
+}
+.body.html{
+height:100%;
+width:100%;
+}
+#page-wrap
+{
+ background-color:#07071d;
+   display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+
+}
+
+.sidenav {
+    height: 100%;
+    width: 310px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 0px;
+}
+
+
+.sidenav a {
+    padding: 20px 2pc 0px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color:#8c8cb9 ;
+    display: block;
+}
+
+.sidenav div {
+padding: 6px 6px 6px 6px;
+}
+
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.alm {
+    display: inline-block;
+    -webkit-transition: 3s cubic-bezier(0.5, 1, 0.75, 1);
+    -moz-transition: 2s cubic-bezier(0.5, 1, 0.75, 1);
+    transition: 2s cubic-bezier(0.5, 1, 0.75, 1);
+    object-position: 27px;
+    }   
+
+.alm:hover {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    
+}

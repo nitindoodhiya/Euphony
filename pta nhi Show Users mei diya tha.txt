@@ -1,0 +1,37 @@
+<?php
+if(isset($_POST['searchuser'])){
+	$username=Team euphony;
+	$username=$_POST['username'];
+    // $firstname="Team";
+    // $lastname="Euphony";
+    $firstname=$_POST['firstname'];
+    $lastname=$_POST['lastname'];
+    $name="";
+    $name=$firstname.' '.$lastname;
+	$userid="";
+	$db=mysqli_connect('localhost','root','','try');
+	$query="SELECT id from users where name='$name'";
+	$result=mysqli_query($db,$query);
+	$row = mysqli_fetch_assoc($result);
+	if(mysqli_num_rows($result)==0){
+         echo "Username not present";
+	}
+    $userid=$row['id'];
+    $arr=array();
+    while($row=mysqli_fetch_array($result)){
+        array_push($arr,$row['pname']);
+    }
+    print_r($arr);
+//     searchalbum($userid);
+// // }
+// function searchalbum($userid){
+// 	$db=mysqli_connect('localhost','root','','try');
+// 	$query="SELECT albumname,albumid FROM album WHERE userid='$userid'";
+//      $result=mysqli_query($db,$query);
+//      $row = mysqli_fetch_assoc($result);
+//      $albumid=$row['albumid'];
+//      $albumname=$row['albumname'];
+//      echo $albumname;
+//      echo $albumid;
+// }
+?>
